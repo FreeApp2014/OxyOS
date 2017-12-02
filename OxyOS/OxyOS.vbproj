@@ -1,0 +1,419 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9CB20DE5-FC8E-4A9B-911A-621993D724D7}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>OxyOS.My.MyApplication</StartupObject>
+    <RootNamespace>OxyOS</RootNamespace>
+    <AssemblyName>OxyOS</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>OxyOS.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>OxyOS.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Apps\FileManager.Designer.vb">
+      <DependentUpon>FileManager.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Apps\FileManager.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Apps\Help.Designer.vb">
+      <DependentUpon>Help.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Apps\Help.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Apps\OxyWrite.Designer.vb">
+      <DependentUpon>OxyWrite.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Apps\OxyWrite.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Apps\PictureViewer.Designer.vb">
+      <DependentUpon>PictureViewer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Apps\PictureViewer.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Apps\Terminal.Designer.vb">
+      <DependentUpon>Terminal.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Apps\Terminal.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BGWorker\MenuBG.Designer.vb">
+      <DependentUpon>MenuBG.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BGWorker\MenuBG.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\AboutOS.Designer.vb">
+      <DependentUpon>AboutOS.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\AboutOS.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\ExitFirstSetupDialog.Designer.vb">
+      <DependentUpon>ExitFirstSetupDialog.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\ExitFirstSetupDialog.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\PickFile.Designer.vb">
+      <DependentUpon>PickFile.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\PickFile.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\RewriteFileDialog.Designer.vb">
+      <DependentUpon>RewriteFileDialog.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\RewriteFileDialog.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\SaveFile.Designer.vb">
+      <DependentUpon>SaveFile.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\SaveFile.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FileManagerDialogs\FM_Delete.Designer.vb">
+      <DependentUpon>FM_Delete.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FileManagerDialogs\FM_Delete.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FileManagerDialogs\FM_NewDir.Designer.vb">
+      <DependentUpon>FM_NewDir.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FileManagerDialogs\FM_NewDir.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FileManagerDialogs\FM_RenameFile.Designer.vb">
+      <DependentUpon>FM_RenameFile.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FileManagerDialogs\FM_RenameFile.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\OML.vb" />
+    <Compile Include="Modules\OxyOS.vb" />
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="PictureViewerDialogs\PV_LoadUrl.Designer.vb">
+      <DependentUpon>PV_LoadUrl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="PictureViewerDialogs\PV_LoadUrl.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Desktop.Designer.vb">
+      <DependentUpon>Desktop.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Desktop.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\FirstSetup.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\FirstSetup.Designer.vb">
+      <DependentUpon>FirstSetup.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="BGWorker\Verify.Designer.vb">
+      <DependentUpon>Verify.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BGWorker\Verify.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Login.Designer.vb">
+      <DependentUpon>Login.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Login.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\MenuScreen.Designer.vb">
+      <DependentUpon>MenuScreen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\MenuScreen.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Apps\FileManager.resx">
+      <DependentUpon>FileManager.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Apps\Help.resx">
+      <DependentUpon>Help.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Apps\OxyWrite.resx">
+      <DependentUpon>OxyWrite.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Apps\PictureViewer.resx">
+      <DependentUpon>PictureViewer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Apps\Terminal.resx">
+      <DependentUpon>Terminal.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BGWorker\MenuBG.resx">
+      <DependentUpon>MenuBG.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\AboutOS.resx">
+      <DependentUpon>AboutOS.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ExitFirstSetupDialog.resx">
+      <DependentUpon>ExitFirstSetupDialog.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\PickFile.resx">
+      <DependentUpon>PickFile.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\RewriteFileDialog.resx">
+      <DependentUpon>RewriteFileDialog.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SaveFile.resx">
+      <DependentUpon>SaveFile.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FileManagerDialogs\FM_Delete.resx">
+      <DependentUpon>FM_Delete.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FileManagerDialogs\FM_NewDir.resx">
+      <DependentUpon>FM_NewDir.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FileManagerDialogs\FM_RenameFile.resx">
+      <DependentUpon>FM_RenameFile.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PictureViewerDialogs\PV_LoadUrl.resx">
+      <DependentUpon>PV_LoadUrl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Desktop.resx">
+      <DependentUpon>Desktop.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\FirstSetup.resx">
+      <DependentUpon>FirstSetup.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BGWorker\Verify.resx">
+      <DependentUpon>Verify.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Login.resx">
+      <DependentUpon>Login.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\MenuScreen.resx">
+      <DependentUpon>MenuScreen.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CloudWallpaper.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\termina1l.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\filemanager.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\filemanager1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\filemanage1r.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\termina1l1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\termina1l2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pictureviewer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\oxywrite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Up-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Refresh-96.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Rename-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Delete-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Up Filled-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Up Filled-501.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Delete Filled-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add Folder Filled-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Refresh-961.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Rename-1001.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\text align.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\format text1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\format text11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Open Filled-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Save Filled-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Save as Filled-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Menu Filled-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Download from the Cloud Filled-25.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Expand Filled-25.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Image1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\help.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\helpapp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\helpapp1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\terminal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Folder-96.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pen-96.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Xlarge Icons-96.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\help_app.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
