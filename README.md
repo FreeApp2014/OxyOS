@@ -15,5 +15,3 @@ Most icons used in this product are from http://icons8.com unless stated
 ### Twitter Accounts
 [@FreeAppSW](https://twitter.com/FreeAppSW) is FreeApp2014's Twitter Account.<br>
 <br>[@chatterboxgame](https://twitter.com/chatterboxgame) is haydenbrown39's Twitter Account.
-
-..
