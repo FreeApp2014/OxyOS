@@ -1,8 +1,10 @@
 # OxyOS
-OxyOS is a simple, user-friendly virtual environment.
+OxyOS is a simple and user-friendly virtual desktop environment made in VB.NET.<br>
+We feature simple and intuitive UI, lots of featured inbuilt apps and planning a high level of third-party application support.
 
-## Developers
-Currently, there are 2 developers. FreeApp2014 and haydenbrown39. We currently do not need any more developers.
+## Our Team
+* FreeApp2014 - initial project creator and developer.
+* haydenbrown39
 
 ## Social Links
 ### Discord Servers
