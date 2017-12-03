@@ -1,5 +1,5 @@
 # OxyOS
-OxyOS is a simple, user-friendly operating system.
+OxyOS is a simple, user-friendly virtual environment.
 
 ## Developers
 Currently, there are 2 developers. FreeApp2014 and haydenbrown39. We currently do not need any more developers.
