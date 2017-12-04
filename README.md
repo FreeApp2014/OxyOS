@@ -4,7 +4,7 @@ We feature simple and intuitive UI, lots of featured inbuilt apps and planning a
 
 ## Our Team
 * FreeApp2014 - initial project creator and developer.
-* haydenbrown39
+* haydenbrown39 - I make things.
 
 ## Acknowledgements
 Most icons used in this product are from http://icons8.com unless stated
