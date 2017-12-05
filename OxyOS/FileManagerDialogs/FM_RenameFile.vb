@@ -3,7 +3,7 @@
         If Not TextBox4.Text = "New filename" Then
             If Not FileManager.ListBox1.SelectedItems.Item(0).Text = Nothing Then
                 FileSystem.Rename(FileManager.TextBox1.Text & "\" & FileManager.ListBox1.SelectedItems.Item(0).Text.ToString, FileManager.TextBox1.Text & "\" & TextBox4.Text)
-                FileManager.fetchdirectorytxtb()
+                FileManager.FetchDirectory(FileManager.TextBox1.Text)
                 Me.Close()
             End If
         End If

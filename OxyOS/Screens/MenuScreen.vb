@@ -5,12 +5,12 @@
     End Sub
 
     Private Sub Menu_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Dim require = OML.ParseOMLDocument(Application.StartupPath & "\OS_Data\apps.oml")
-        For Each elem In require
-            If Not OML.NodeIsStructure(elem) And Not OML.NodeIsComment(elem) Then
-                MsgBox(elem)
-            End If
-        Next
+        'Dim require = OML.ParseOMLDocument(Application.StartupPath & "\OS_Data\apps.oml")
+        'For Each elem In require
+        '    If Not OML.NodeIsStructure(elem) And Not OML.NodeIsComment(elem) Then
+        '        MsgBox(elem)
+        '    End If
+        'Next
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click

@@ -39,7 +39,7 @@ Public Class FileManager
             ListBox2.Items.Add(disk)
         Next
     End Sub
-    Sub fetchdirectory()
+    Sub FetchDirectoryByListBoxItem()
         If TextBox1.Text = "" Then
             Dim p As String = ListBox1.SelectedItems.Item(0).Text.ToString
             TextBox1.Text = ListBox1.SelectedItems.Item(0).Text.ToString
@@ -77,12 +77,12 @@ Public Class FileManager
         End If
 
     End Sub
-    Sub fetchdirectorytxtb()
+    Sub FetchDirectory(ByVal Path As String)
         ListBox1.Items.Clear()
-        For Each File In Directory.GetDirectories(TextBox1.Text)
+        For Each File In Directory.GetDirectories(Path)
             ListBox1.Items.Add(File.Split("\").Last).ImageIndex = 0
         Next
-        For Each File In Directory.GetFiles(TextBox1.Text)
+        For Each File In Directory.GetFiles(Path)
             Dim alpha = ListBox1.Items.Add(File.Split("\").Last)
             If alpha.Text.EndsWith(".rtf") Or alpha.Text.EndsWith(".txt") Then
                 alpha.ImageIndex = 2
@@ -133,20 +133,23 @@ Public Class FileManager
     Public Sub Delete()
         If File.GetAttributes(TextBox1.Text & "\" & ListBox1.SelectedItems.Item(0).Text.ToString) = FileAttributes.Directory Then
             Directory.Delete(TextBox1.Text & "\" & ListBox1.SelectedItems.Item(0).Text, True)
-            fetchdirectorytxtb()
+            FetchDirectory(TextBox1.Text)
         Else
             File.Delete(TextBox1.Text & "\" & ListBox1.SelectedItems.Item(0).Text)
-            fetchdirectorytxtb()
+            FetchDirectory(TextBox1.Text)
         End If
     End Sub
 
     Private Sub ListBox1_MouseDoubleClick(sender As Object, e As EventArgs) Handles ListBox1.DoubleClick
+        OpenListBoxSelectedFile()
+    End Sub
+    Private Sub OpenListBoxSelectedFile()
         If Not ListBox1.SelectedItems.Item(0).Text = Nothing Then
             If TextBox1.Text = "" Then
-                fetchdirectory()
+                FetchDirectoryByListBoxItem()
             Else
                 If File.GetAttributes(TextBox1.Text & "\" & ListBox1.SelectedItems.Item(0).Text.ToString) = FileAttributes.Directory Then
-                    fetchdirectory()
+                    FetchDirectoryByListBoxItem()
                 Else
                     If ListBox1.SelectedItems.Item(0).Text.ToString.EndsWith(".rtf") Or ListBox1.SelectedItems.Item(0).Text.ToString.EndsWith(".txt") Or ListBox1.SelectedItems.Item(0).Text.ToString.EndsWith(".oml") Then
                         OxyWrite.Show()
@@ -179,7 +182,7 @@ Public Class FileManager
 
     Private Sub TextBox1_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TextBox1.KeyPress
         If e.KeyChar = Chr(31) Then
-            fetchdirectorytxtb()
+            FetchDirectory(TextBox1.Text)
         End If
     End Sub
 
@@ -198,7 +201,7 @@ Public Class FileManager
     Private Sub Button9_Click(sender As Object, e As EventArgs)
         If Not ListBox1.SelectedItems.Item(0).Text = Nothing Then
             Directory.Delete(ListBox1.SelectedItems.Item(0).Text, True)
-            fetchdirectorytxtb()
+            FetchDirectory(TextBox1.Text)
         End If
     End Sub
     Private Sub Panel3_MouseDown(sender As Object, e As MouseEventArgs) Handles Panel3.MouseDown
@@ -235,7 +238,7 @@ Public Class FileManager
     End Sub
 
     Private Sub Button7_Click_1(sender As Object, e As EventArgs) Handles Button7.Click
-        fetchdirectorytxtb()
+        FetchDirectory(TextBox1.Text)
     End Sub
 
     Private Sub Button2_Click_1(sender As Object, e As EventArgs) Handles Button2.Click
@@ -253,7 +256,7 @@ Public Class FileManager
         If Not dirname = "" Or Not dirname = "Directory Name" Then
             If Not Directory.Exists(TextBox1.Text & "\" & dirname) Then
                 Directory.CreateDirectory(TextBox1.Text & "\" & dirname)
-                fetchdirectorytxtb()
+                FetchDirectory(TextBox1.Text)
                 FM_NewDir.Close()
             Else
                 FM_NewDir.Panel6.BackColor = Color.Red
@@ -285,24 +288,7 @@ Public Class FileManager
     End Sub
 
     Private Sub OpenToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles OpenToolStripMenuItem.Click
-        If Not ListBox1.SelectedItems.Item(0).Text = Nothing Then
-            If TextBox1.Text = "" Then
-                fetchdirectory()
-            Else
-                If File.GetAttributes(TextBox1.Text & "\" & ListBox1.SelectedItems.Item(0).Text.ToString) = FileAttributes.Directory Then
-                    fetchdirectory()
-                Else
-                    If ListBox1.SelectedItems.Item(0).Text.ToString.EndsWith(".rtf") Or ListBox1.SelectedItems.Item(0).Text.ToString.EndsWith(".txt") Or ListBox1.SelectedItems.Item(0).Text.ToString.EndsWith(".oml") Then
-                        OxyWrite.Show()
-                        OxyWrite.LoadExt(TextBox1.Text & "\" & ListBox1.SelectedItems.Item(0).Text.ToString)
-                    End If
-                    If ListBox1.SelectedItems.Item(0).Text.ToString.EndsWith(".png") Or ListBox1.SelectedItems.Item(0).Text.ToString.EndsWith(".jpg") Or ListBox1.SelectedItems.Item(0).Text.ToString.EndsWith(".jpeg") Or ListBox1.SelectedItems.Item(0).Text.ToString.EndsWith(".gif") Or ListBox1.SelectedItems.Item(0).Text.ToString.EndsWith(".bmp") Then
-                        PictureViewer.Show()
-                        PictureViewer.LoadExt(TextBox1.Text & "\" & ListBox1.SelectedItems.Item(0).Text)
-                    End If
-                End If
-            End If
-        End If
+        OpenListBoxSelectedFile()
     End Sub
 
     Private Sub OxyWriteToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles OxyWriteToolStripMenuItem.Click
@@ -334,6 +320,6 @@ Public Class FileManager
 
     Private Sub ListBox2_MouseDoubleClick(sender As Object, e As MouseEventArgs) Handles ListBox2.MouseDoubleClick
         TextBox1.Text = ListBox2.SelectedItem
-        fetchdirectorytxtb()
+        FetchDirectory(TextBox1.Text)
     End Sub
 End Class
