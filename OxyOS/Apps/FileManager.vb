@@ -14,6 +14,7 @@ Public Class FileManager
     Private Sub FileManager_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.Owner = Desktop
         TextBox1.Text = Application.StartupPath & "\UserDocs"
+        Label1.Text = "UserDocs - File Manager"
         For Each File In Directory.GetDirectories(Application.StartupPath & "\UserDocs")
             ListBox1.Items.Add(File.Split("\").Last).ImageIndex = 0
         Next
@@ -40,6 +41,7 @@ Public Class FileManager
         Next
     End Sub
     Sub FetchDirectoryByListBoxItem()
+        Label1.Text = ListBox1.SelectedItems.Item(0).Text.ToString & " - File Manager"
         If TextBox1.Text = "" Then
             Dim p As String = ListBox1.SelectedItems.Item(0).Text.ToString
             TextBox1.Text = ListBox1.SelectedItems.Item(0).Text.ToString
@@ -78,6 +80,7 @@ Public Class FileManager
 
     End Sub
     Sub FetchDirectory(ByVal Path As String)
+        Label1.Text = Path.Split("\").Last & " - File Manager"
         ListBox1.Items.Clear()
         For Each File In Directory.GetDirectories(Path)
             ListBox1.Items.Add(File.Split("\").Last).ImageIndex = 0

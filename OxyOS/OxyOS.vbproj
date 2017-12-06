@@ -96,6 +96,12 @@
     <Compile Include="Apps\PictureViewer.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Apps\SystemSettings.Designer.vb">
+      <DependentUpon>SystemSettings.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Apps\SystemSettings.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Apps\Terminal.Designer.vb">
       <DependentUpon>Terminal.vb</DependentUpon>
     </Compile>
@@ -223,6 +229,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Apps\PictureViewer.resx">
       <DependentUpon>PictureViewer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Apps\SystemSettings.resx">
+      <DependentUpon>SystemSettings.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Apps\Terminal.resx">
       <DependentUpon>Terminal.vb</DependentUpon>
