@@ -316,6 +316,7 @@ Public Class FileManager
 
     Private Sub RenameToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RenameToolStripMenuItem.Click
         FM_RenameFile.Show()
+        FM_RenameFile.SetOld(ListBox1.SelectedItems.Item(0).Text)
     End Sub
 
     Private Sub ListBox2_MouseDoubleClick(sender As Object, e As MouseEventArgs) Handles ListBox2.MouseDoubleClick
