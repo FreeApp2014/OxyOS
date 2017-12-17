@@ -1,0 +1,10 @@
+D:\vb.net projects\VBStudent\VBStudent\Calculator\Calculator\obj\Debug\Calculator.exe
+D:\vb.net projects\VBStudent\VBStudent\Calculator\Calculator\obj\Debug\Calculator.xml
+D:\vb.net projects\VBStudent\VBStudent\Calculator\Calculator\obj\Debug\Calculator.pdb
+D:\vb.net projects\VBStudent\VBStudent\Calculator\Calculator\bin\Debug\Calculator.exe
+D:\vb.net projects\VBStudent\VBStudent\Calculator\Calculator\bin\Debug\Calculator.pdb
+D:\vb.net projects\VBStudent\VBStudent\Calculator\Calculator\bin\Debug\Calculator.xml
+D:\vb.net projects\VBStudent\VBStudent\Calculator\Calculator\obj\Debug\ResolveAssemblyReference.cache
+D:\vb.net projects\VBStudent\VBStudent\Calculator\Calculator\obj\Debug\Calculator.frmcalculator.resources
+D:\vb.net projects\VBStudent\VBStudent\Calculator\Calculator\obj\Debug\Calculator.Resources.resources
+D:\vb.net projects\VBStudent\VBStudent\Calculator\Calculator\obj\Debug\Calculator.vbproj.GenerateResource.Cache

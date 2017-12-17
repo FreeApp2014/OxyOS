@@ -1,0 +1,10 @@
+C:\Users\admin\Desktop\OxyCalc\Calculator\bin\Debug\Calculator.exe
+C:\Users\admin\Desktop\OxyCalc\Calculator\bin\Debug\Calculator.pdb
+C:\Users\admin\Desktop\OxyCalc\Calculator\bin\Debug\Calculator.xml
+C:\Users\admin\Desktop\OxyCalc\Calculator\obj\Debug\Calculator.vbprojResolveAssemblyReference.cache
+C:\Users\admin\Desktop\OxyCalc\Calculator\obj\Debug\Calculator.frmcalculator.resources
+C:\Users\admin\Desktop\OxyCalc\Calculator\obj\Debug\Calculator.Resources.resources
+C:\Users\admin\Desktop\OxyCalc\Calculator\obj\Debug\Calculator.vbproj.GenerateResource.Cache
+C:\Users\admin\Desktop\OxyCalc\Calculator\obj\Debug\Calculator.exe
+C:\Users\admin\Desktop\OxyCalc\Calculator\obj\Debug\Calculator.xml
+C:\Users\admin\Desktop\OxyCalc\Calculator\obj\Debug\Calculator.pdb
